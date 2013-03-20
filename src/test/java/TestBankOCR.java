@@ -22,4 +22,14 @@ public class TestBankOCR {
                                          "  |  |  |  |  |  |  |  |  |");
         assertEquals("111111111", uneBankOCR.convertirNumeroDeCompte());
     }
+
+    @Test
+    public void PeutAfficherUnCompteAvecTousLesChiffres()
+    {
+        BankOCR uneBankOCR = new BankOCR();
+        uneBankOCR.ajouterNumeroDeCompte("    _  _     _  _  _  _  _ \n" +
+                                         "  | _| _||_||_ |_   ||_||_|\n" +
+                                         "  ||_  _|  | _||_|  ||_| _|");
+        assertEquals("123456789", uneBankOCR.convertirNumeroDeCompte());
+    }
 }
